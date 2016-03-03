@@ -8,7 +8,7 @@ which I agreed not to post real code for.
 
 Cryptography files are written in Java, and prepared for Logic and Computation class
 
-Skeleton of Memory Manager was provided by instructor for Data Structures.  Complete project 
-description is presented, as well skeleton files and my finished files.
+Skeleton of Memory Manager was provided by instructor for Data Structures.  It is written in C++.
+Complete project description is presented, as well skeleton files and my finished files.
 
 Matt Wall
