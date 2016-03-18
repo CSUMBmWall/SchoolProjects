@@ -25,8 +25,7 @@ public class Assignment {
 	public static int permutation = 1;
 	public static int numJobs;
 
-	// holds all 1's, 2's 3's, etc -- when multiplied by binaryMatrix, give job
-	// chosen
+	// holds all 1's, 2's 3's, etc -- when multiplied by binaryMatrix, gives chosen job
 	public static int[][] genericJobMatrix;
 
 	// holds job input from user
@@ -89,7 +88,6 @@ public class Assignment {
 		will be multiplied by binary matrix
 		3 jobs -> 3 rows -> 111 222 333
 		2 jobs -> 2 rows -> 11 22 */
-
 		populateJobsMatrix();
 		
 		//call recursive function to compute permutations of jobs
@@ -97,7 +95,6 @@ public class Assignment {
 		printBigWinner();
 	}
 	
-	//no explanation needed
 	private static void printBigWinner() {
 		int minKey = Collections.min(costMap.keySet());
 		ArrayList<Integer> minValues = new ArrayList<Integer>();
@@ -115,7 +112,7 @@ public class Assignment {
 		 }		
 	}
 	
-	//recursive method to compute permutation
+	//compute permutation
 	public static void recursiveAssignment(int n) {
 		if (n == 0) {
 			multiplyMatrices(binaryMatrix, genericJobMatrix, chosenJobArray);
@@ -193,7 +190,7 @@ public class Assignment {
 		}
 	}
 
-	//for instances of recursive algorithm where n is odd swap matrixArray A[0] with A[n]
+	//for instances where n is odd swap matrixArray A[0] with A[n]
 	public static void swapMatricesOdd(int n, int[][] matrix) {
 		int[] lineOneArray = new int[numJobs];
 		int[] lineNArray = new int[numJobs];
@@ -205,7 +202,7 @@ public class Assignment {
 		putLineMatrix(lineNArray, 0, matrix);
 	}
 
-	//for instances of recursive algorithm where n is even swap matrixArray A[i] and A[n]
+	//for instances where n is even swap matrixArray A[i] and A[n]
 	public static void swapMatricesEven(int i, int n, int[][] matrix) {
 		int[] lineOneArray = new int[numJobs];
 		int[] lineNArray = new int[numJobs];
